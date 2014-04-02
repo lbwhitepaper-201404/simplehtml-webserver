@@ -25,8 +25,7 @@ cookbook_file ::File.join(
 end
 
 web_app 'simplehtml-webserver' do
-  server_name '0.0.0.0'
-  server_aliases ['.']
+  server_name 'this gets ignored'
+  server_aliases ['this also gets ignored']
   docroot node['simplehtml-webserver']['htdocs']
-  cookbook 'apache2'
 end

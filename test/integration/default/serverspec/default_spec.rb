@@ -29,4 +29,8 @@ describe 'apache' do
   describe command('wget -q -O - http://localhost') do
     it { should return_stdout '<h1>Hello World!</h1>' }
   end
+
+  describe command("ls /etc/#{apache_name}/sites-enabled/ | wc -l") do
+    it { should return_stdout '1' }
+  end
 end
