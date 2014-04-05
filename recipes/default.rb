@@ -29,3 +29,5 @@ web_app 'simplehtml-webserver' do
   server_aliases ['this also gets ignored']
   docroot node['simplehtml-webserver']['htdocs']
 end
+
+iptables_rule 'http_iptables_rule'
