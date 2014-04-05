@@ -17,6 +17,10 @@ describe 'simplehtml-webserver::default' do
     expect(chef_run).to include_recipe('apache2::default')
   end
 
+  it 'includes iptables::default' do
+    expect(chef_run).to include_recipe('iptables::default')
+  end
+
   it 'creates web_app directory' do
     expect(chef_run).to create_directory('/foo')
   end

@@ -14,6 +14,7 @@ end
 
 include_recipe 'apt::default'
 include_recipe 'apache2::default'
+include_recipe 'iptables::default'
 
 directory node['simplehtml-webserver']['htdocs'] do
   recursive true
